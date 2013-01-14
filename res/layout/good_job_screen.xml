@@ -1,0 +1,51 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gameinfobg"
+    tools:context=".GameInstructions"
+    tools:ignore="Deprecated" >
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="398dp"
+        android:layout_height="216dp"
+        android:layout_x="446dp"
+        android:layout_y="5dp"
+        android:contentDescription="Headerpic"
+        android:src="@drawable/bannerpic"
+        tools:ignore="HardcodedText" />
+    
+        <TextView
+        android:id="@+id/textViewGoodJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="541dp"
+        android:layout_y="254dp"
+        android:text="Good Job!"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="50dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="594dp"
+        android:layout_y="354dp"
+        android:text="Username"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="594dp"
+        android:layout_y="319dp"
+        android:text="Your Score is:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:ignore="HardcodedText" />
+
+</AbsoluteLayout>

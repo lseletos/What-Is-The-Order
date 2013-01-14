@@ -1,0 +1,623 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1280dp"
+    android:layout_height="800dp"
+    android:background="@drawable/droidbg"
+    tools:ignore="Deprecated" >
+
+    <!-- User Name Input: -->
+
+    <EditText
+        android:id="@+id/userNameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_x="39dp"
+        android:layout_y="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Player&apos;s Name"
+        android:textColor="#ffffff"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/buttonGo"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="263dp"
+        android:layout_y="27dp"
+        android:text="GO"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Relative Time Button Option: -->
+
+    <Button
+        android:id="@+id/buttonRelativeTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="98dp"
+        android:layout_x="239dp"
+        android:layout_y="139dp"
+        android:text="Relative Time"
+        android:textColor="#ffffff"
+        tools:ignore="HardcodedText" />
+
+    <!-- Linear Time Button Option: -->
+
+    <Button
+        android:id="@+id/buttonLinearTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="58dp"
+        android:layout_x="113dp"
+        android:layout_y="139dp"
+        android:text="Linear Time"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText" />
+
+    <!-- Game Description -->
+
+    <TextView
+        android:id="@+id/textViewAVideoShows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="166dp"
+        android:layout_y="218dp"
+        android:text="@string/a_video_shows_an_action_the_action_is_divided_into_3_steps_the_"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewMiddleStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="167dp"
+        android:layout_y="246dp"
+        android:text="middle step is placed on the screen and the player is asked to tell"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewWhatOccurred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="165dp"
+        android:layout_y="269dp"
+        android:text="@string/what_occurred_before_and_after_that_step_"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <!-- Basic Play -->
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="239dp"
+        android:layout_y="356dp"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/radioButtonBeforeAfter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Before/After"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonEarlierLater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earlier/Later"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <!-- Advanced/Basic Play Radio Buttons -->
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="204dp"
+        android:layout_y="318dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButtonBasicPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basic Play"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAdvancedPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="258dp"
+            android:text="Advanced Play"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <!-- Advanced Play -->
+
+    <TextView
+        android:id="@+id/textViewStep1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="596dp"
+        android:layout_y="364dp"
+        android:text="Step 1: Before"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewStep3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="596dp"
+        android:layout_y="410dp"
+        android:text="Step 3: To Finish"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewStep2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="596dp"
+        android:layout_y="387dp"
+        android:text="Step 2: Now"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <!-- Header/Logo Picture -->
+
+    <ImageView
+        android:id="@+id/imageViewBannerPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="530dp"
+        android:layout_y="8dp"
+        android:contentDescription="bannerheader"
+        android:src="@drawable/bannerpic"
+        tools:ignore="HardcodedText" />
+
+    <!-- Repeat Question -->
+
+    <TextView
+        android:id="@+id/textViewRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="132dp"
+        android:layout_y="547dp"
+        android:text="Repeat"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewRepeat_Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="134dp"
+        android:layout_y="568dp"
+        android:text="Game:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="200dp"
+        android:layout_y="543dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButtonRepeatYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRepeatNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="No"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <!-- Video Question -->
+
+    <TextView
+        android:id="@+id/textViewVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="644dp"
+        android:layout_y="641dp"
+        android:text="Video:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="713dp"
+        android:layout_y="628dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButtonVideoYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonVideoNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="No"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <!-- Text Question -->
+
+    <TextView
+        android:id="@+id/textViewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="392dp"
+        android:layout_y="641dp"
+        android:text="Text:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="453dp"
+        android:layout_y="630dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButtonTextYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTextNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="No"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <!-- Practice Question -->
+
+    <TextView
+        android:id="@+id/textViewPractice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="389dp"
+        android:layout_y="556dp"
+        android:text="Practice:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="473dp"
+        android:layout_y="546dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButtonPracticeYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPracticeNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="No"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <!-- Reward Question -->
+
+    <TextView
+        android:id="@+id/textViewReward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="126dp"
+        android:layout_y="631dp"
+        android:text="Reward"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewReward_Screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="128dp"
+        android:layout_y="656dp"
+        android:text="Screen:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="202dp"
+        android:layout_y="630dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButtonRewardYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRewardNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="No"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <!-- Rounds per Game Question -->
+
+    <TextView
+        android:id="@+id/textViewRounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="659dp"
+        android:layout_y="546dp"
+        android:text="Rounds"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewPerGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="655dp"
+        android:layout_y="568dp"
+        android:text="per Game:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="750dp"
+        android:layout_y="544dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButtonNum1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNum3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNum4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNum5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNum6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNum7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNum8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <!-- Actions -->
+
+    <TextView
+        android:id="@+id/textViewActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="868dp"
+        android:layout_y="202dp"
+        android:text="Actions:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="855dp"
+        android:layout_y="200dp"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/radioButtonSandwich"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Making a sandwich"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBannana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eating a bannana"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCoat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Putting on a coat"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBubbles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blowing bubbles"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBalloon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blowing up a balloon"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="-190dp"
+            android:text="Using blocks"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDottoDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="0dp"
+            android:text="Dot-to-dot"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDrinking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="0dp"
+            android:text="Drinking"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPaper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="0dp"
+            android:text="Cutting Paper"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSocks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="0dp"
+            android:text="Putting on socks"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <!-- Play Game Button -->
+
+
+
+	<!-- Game Information Button -->
+	
+    <Button
+        android:id="@+id/buttonGameInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1095dp"
+        android:layout_y="11dp"
+        android:onClick="getGameInfo"
+        android:text="Game Information"
+        tools:ignore="HardcodedText" />
+
+    
+    
+	<!-- Game Instructions Button -->
+	
+    <Button
+        android:id="@+id/buttonGameInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="1097dp"
+        android:layout_y="62dp"
+        android:onClick="getGameInstructions"
+        android:text="Game Instructions"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/buttonViewReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="359dp"
+        android:layout_y="18dp"
+        android:onClick="getViewReport"
+        android:text="View Report"
+        tools:ignore="HardcodedText" />
+    
+
+
+    <Button
+        android:id="@+id/buttonPlayGame"
+        android:layout_width="162dp"
+        android:layout_height="70dp"
+        android:layout_x="901dp"
+        android:layout_y="616dp"
+        android:onClick="playGame"
+        android:text="Play Game!"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        tools:ignore="HardcodedText" />
+
+</AbsoluteLayout>

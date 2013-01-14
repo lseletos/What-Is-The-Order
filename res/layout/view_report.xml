@@ -1,0 +1,38 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/droidbg"
+    tools:ignore="Deprecated" >
+
+    <TextView
+        android:id="@+id/textViewPlayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="116dp"
+        android:layout_y="195dp"
+        android:text="Username: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewOverAllScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="119dp"
+        android:layout_y="234dp"
+        android:text="Over all score: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewRoundsPlayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="121dp"
+        android:layout_y="275dp"
+        android:text="Total Rounds Played: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:ignore="HardcodedText" />
+
+</AbsoluteLayout>

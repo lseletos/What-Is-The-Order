@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">What Is The Order</string>
+    <string name="menu_settings_game_info">Game Information</string>
+    <string name="menu_settings_instructions">Instructions</string>
+    <string name="title_activity_main">What Is The Order</string>
+    <string name="player_apos_s_name">Player&amp;apos;s Name</string>
+    <string name="a_video_shows_an_action_the_action_is_divided_into_3_steps_the_">"A video shows an action. The action is divided into 3 Steps. The "</string>
+    <string name="what_occurred_before_and_after_that_step_">what occurred before and after that step.</string>
+	
+	<string-array name="pages_array">
+	 <item>Game Information</item>
+	 <item>Instructions</item>
+	 <item>Time Game</item>
+	 <item>Switch to button mode</item>
+	</string-array>
+
+</resources>

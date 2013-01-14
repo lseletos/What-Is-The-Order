@@ -1,0 +1,30 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="800dp"
+    android:background="@drawable/gameinfobg"
+    tools:context=".GameInstructions"
+    tools:ignore="Deprecated" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="418dp"
+        android:layout_height="227dp"
+        android:layout_x="435dp"
+        android:layout_y="7dp"
+        android:contentDescription="Headerpic"
+        android:src="@drawable/bannerpic"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="544dp"
+        android:layout_y="258dp"
+        android:text="Game Instructions Here"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+    
+
+</AbsoluteLayout>
