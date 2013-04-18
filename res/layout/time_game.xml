@@ -4,65 +4,65 @@
     android:layout_height="800dp"
     android:background="@drawable/gamescreen"
     tools:ignore="Deprecated,ExtraText" >
-   	
+    
     <ImageView
         android:id="@+id/imageViewPlaceholder1"
-        android:layout_width="314dp"
-        android:layout_height="220dp"
-        android:layout_x="117dp"
-        android:layout_y="228dp"
-        android:contentDescription="placeholderimage"
-        android:src="@drawable/placeholder"
+        android:layout_width="250dp"
+        android:layout_height="189dp"
+        android:layout_x="145dp"
+        android:layout_y="240dp"
+        android:contentDescription="1st"
+        android:src="@drawable/first"
         tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/imageViewPlaceholder2"
-        android:layout_width="314dp"
-        android:layout_height="220dp"
-        android:layout_x="485dp"
-        android:layout_y="232dp"
-        android:contentDescription="placeholderimage"
-        android:src="@drawable/placeholder"
+        android:layout_width="250dp"
+        android:layout_height="189dp"
+        android:layout_x="520dp"
+        android:layout_y="240dp"
+        android:contentDescription="2nd"
+        android:src="@drawable/second"
         tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/imageViewPlaceholder3"
-        android:layout_width="314dp"
-        android:layout_height="220dp"
-        android:layout_x="870dp"
-        android:layout_y="229dp"
-        android:contentDescription="placeholderimage"
-        android:src="@drawable/placeholder"
-        tools:ignore="HardcodedText" />
-
-    <ImageView
-        android:id="@+id/imageSelectableThree"
-        android:layout_width="173dp"
-        android:layout_height="229dp"
-        android:layout_x="183dp"
-        android:layout_y="454dp"
+        android:layout_width="250dp"
+        android:layout_height="189dp"
+        android:layout_x="905dp"
+        android:layout_y="240dp"
         android:contentDescription="3rd"
-        android:src="@drawable/three"
+        android:src="@drawable/third"
         tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/imageSelectableOne"
         android:layout_width="286dp"
-        android:layout_height="226dp"
-        android:layout_x="499dp"
-        android:layout_y="459dp"
-        android:contentDescription="1st"
-        android:src="@drawable/one"
+        android:layout_height="180dp"
+        android:layout_x="124dp"
+        android:layout_y="470dp"
+        android:contentDescription="3rd"
+        android:src="@drawable/block3"
         tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/imageSelectableTwo"
-        android:layout_width="167dp"
-        android:layout_height="220dp"
-        android:layout_x="952dp"
-        android:layout_y="459dp"
+        android:layout_width="286dp"
+        android:layout_height="180dp"
+        android:layout_x="499dp"
+        android:layout_y="470dp"
+        android:contentDescription="1st"
+        android:src="@drawable/block1"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageSelectableThree"
+        android:layout_width="286dp"
+        android:layout_height="180dp"
+        android:layout_x="884dp"
+        android:layout_y="470dp"
         android:contentDescription="2nd"
-        android:src="@drawable/two"
+        android:src="@drawable/block2"
         tools:ignore="HardcodedText" />
 
     <ImageView
@@ -79,12 +79,18 @@
         android:id="@+id/textViewDisplayText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="515dp"
-        android:layout_y="197dp"
-        android:text="Round 1! Good Luck"
+        android:layout_x="592dp"
+        android:layout_y="196dp"
+        android:text="Good Luck"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#FFFFFF"
         tools:ignore="HardcodedText" />
+    
+    <VideoView
+	   android:id="@+id/myvideoview"
+	   android:layout_width="fill_parent"
+	   android:layout_height="wrap_content"
+   />
 
 </AbsoluteLayout>
     

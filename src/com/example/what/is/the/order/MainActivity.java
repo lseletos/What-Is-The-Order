@@ -1,15 +1,21 @@
 package com.example.what.is.the.order;
 
+import java.util.Timer;
+import java.util.TimerTask;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.PixelFormat;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.MediaController;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 
 public class MainActivity extends Activity 
@@ -336,11 +342,24 @@ public class MainActivity extends Activity
     }
     else
     {
+   
+    	  
+       /** Called when the activity is first created. */      
+           VideoView blockVid = (VideoView)this.findViewById(R.id.videoView);
+           blockVid.setMinimumHeight(100);
+           blockVid.setMinimumWidth(100);
+           String fileName = "/res/drawable-mdpi/blocks.mp4";
+           blockVid.setVideoURI(Uri.parse(fileName));
+           blockVid.start();
+
+      
+       
     	//how many rounds per game
     	Toast.makeText(getBaseContext(), "Rounds per game: " + roundsPerGame,   
       Toast.LENGTH_SHORT).show();   
     	Intent intent = new Intent(this, TimeGame.class);
       startActivity(intent);
+
     }
 
   }
@@ -377,5 +396,6 @@ public class MainActivity extends Activity
       Toast.LENGTH_SHORT).show();  
   	}
   	}
+  
  }
  

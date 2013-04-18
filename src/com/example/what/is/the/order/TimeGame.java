@@ -1,20 +1,29 @@
 package com.example.what.is.the.order;
 
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.PixelFormat;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 
 
 public class TimeGame extends Activity
 { 
-	//Dynamic display text
-	 TextView displayText;
+//	//Dynamic display text
+//	 TextView displayText;
+	 
+	 Random random;
 	 
 	//check which image is clicked & set to a default string
 	 String	selectedImage = "default";
@@ -29,6 +38,7 @@ public class TimeGame extends Activity
 	 String stringImageZoneOne = "ZoneOne";
 	 String stringImageZoneTwo = "ZoneTwo";
 	 String stringImageZoneThree = "ZoneThree";
+		
 	 
 	 //round score
 	 int roundScore = 0;
@@ -45,11 +55,18 @@ public class TimeGame extends Activity
 	 //Game images
 	 ImageView imageOne, imageTwo, imageThree;
 	 
+	 
+	 //Game image paths
+	 String image1, image2, image3;
+	 
 	 //Game placement zones
 	 ImageView placementImageOne, placementImageTwo, placementImageOneThree;
 
 	 //check if the image’s correct corresponding place is being clicked on & set its default to false
 	 boolean isClicked_ImagePlacementIcons = false;
+	 
+	 //created an array of images to be randomized 
+	// public String[] myImages = new String[3];
 	 
 	 //Check if past moves are correct in order to move on to next move
 	 boolean moveOneCorrect = false;
@@ -75,6 +92,12 @@ public class TimeGame extends Activity
   @Override
   public void onCreate(Bundle savedInstanceState) 
   {
+  	
+		 //init array
+//			myImages[0] = "block1";
+//			myImages[1] = "block2";
+//			myImages[2] = "block3";
+
       super.onCreate(savedInstanceState);
       setContentView(R.layout.time_game);
        
@@ -82,7 +105,7 @@ public class TimeGame extends Activity
       imageOne = (ImageView)findViewById(R.id.imageSelectableOne);
       imageTwo = (ImageView)findViewById(R.id.imageSelectableTwo);
       imageThree = (ImageView)findViewById(R.id.imageSelectableThree);
-
+      
    	  //Connecting image placement variables to xml file image placement buttons
       placementImageOne = (ImageView)findViewById(R.id.imageViewPlaceholder1);
       placementImageTwo = (ImageView)findViewById(R.id.imageViewPlaceholder2);
@@ -98,7 +121,7 @@ public class TimeGame extends Activity
       placementImageTwo.setOnClickListener(placementImageTwoListener); 
       placementImageOneThree.setOnClickListener(placementImageThreeListener); 
       
-      displayText = (TextView) findViewById(R.id.textViewDisplayText);
+//      displayText = (TextView) findViewById(R.id.textViewDisplayText);
       
 	  	if (gameOverCalculationsDone == true)
 	  	{
@@ -106,7 +129,8 @@ public class TimeGame extends Activity
 	    	Intent intent = new Intent(this, GoodJobScreen.class);
 	      startActivity(intent);
 	  	}
-
+	  	
+     
   }
   
   //Game Image One button listener
@@ -115,7 +139,7 @@ public class TimeGame extends Activity
       public void onClick(View v)  
       {         
       	//reassigns the value of selectedImage 
-      	selectedImage = stringImageOne;  
+      	selectedImage = stringImageOne;   
 
       }  
         
@@ -128,18 +152,18 @@ public class TimeGame extends Activity
       {  
       	//reassigns the value of selectedImage 
       	selectedImage = stringImageTwo;
-      	
+
       }
   }; 
   
-  //Game Image Two button listener
+  //Game Image Three button listener
   private OnClickListener imageThreeListener = new OnClickListener()  
   {  
       public void onClick(View v)  
       {  
       	//reassigns the value of selectedImage 
       	selectedImage = stringImageThree;
-      	
+ 
       }
   };
 
@@ -186,18 +210,25 @@ void firstGameMoveValidation()
 	if(isClicked_ImagePlacementIcons == true)
 	{
 		//First Move Validation
-		if (selectedImagePlacement ==  stringImageZoneOne && selectedImage == stringImageOne)
+		if (selectedImagePlacement ==  stringImageZoneOne && selectedImage == stringImageTwo)
 		{
 			moveOneCorrect = true;
 			
-      //sets text view to update the top text display 
-      displayText.setText("Correct! Make your second move.");
+//      //sets text view to update the top text display 
+//      displayText.setText("Correct! Make your second move.");
 
     	roundIsWon = false;
     	
     	//replace/move image to placeholder spot
-    	imageOne.offsetTopAndBottom(-240);
-    	imageOne.offsetLeftAndRight(-364);
+    	imageTwo.offsetTopAndBottom(-226);
+    	imageTwo.offsetLeftAndRight(-374);
+    	
+
+//Error! Input user name
+    	Toast.makeText(getBaseContext(), selectedImage,   
+      Toast.LENGTH_SHORT).show();      
+    	
+
 
 		}
 		//First Move Error Checking
@@ -205,8 +236,8 @@ void firstGameMoveValidation()
 		{
 			moveOneCorrect = false;
 			
-      //sets text view to update the top text display 
-      displayText.setText("Incorrect! Try again!");
+//      //sets text view to update the top text display 
+//      displayText.setText("Incorrect! Try again!");
       
     	roundIsWon = false;
     	
@@ -219,30 +250,34 @@ void secondGameMoveValidation()
 	//When Image placement zone is clicked then continue
 	if(isClicked_ImagePlacementIcons == true)
 	{
+	//Error! Input user name
+  	Toast.makeText(getBaseContext(), selectedImage,   
+    Toast.LENGTH_SHORT).show();      
+  	
 		//Only move on if move one is correct
 		if (moveOneCorrect == true)
 		{
 			//Second Move Validation
-			if ( selectedImagePlacement == stringImageZoneTwo && selectedImage == stringImageTwo)
+			if ( selectedImagePlacement == stringImageZoneTwo && selectedImage == stringImageThree)
 			{
 				moveTwoCorrect = true;
 				
-	      //sets text view to update the top text display 
-	      displayText.setText("Correct! Make your third move.");
+//	      //sets text view to update the top text display 
+//	      displayText.setText("Correct! Make your third move.");
 	      
 	    	roundIsWon = false;
 	    	
 	    	//replace/move image to placeholder spot
-	    	imageTwo.offsetTopAndBottom(-240);
-	    	imageTwo.offsetLeftAndRight(-380);
+	    	imageThree.offsetTopAndBottom(-226);
+	    	imageThree.offsetLeftAndRight(-383);
 			}
 			//First Move Error Checking
 			else
 			{
 				moveTwoCorrect = false;
 	    	
-	      //sets text view to update the top text display 
-	      displayText.setText("Incorrect! Try again!");
+//	      //sets text view to update the top text display 
+//	      displayText.setText("Incorrect! Try again!");
 	    	
 	    	roundIsWon = false;
 			}
@@ -259,13 +294,13 @@ void thirdGameMoveValidation()
 			if (moveTwoCorrect == true && moveTwoCorrect == true)
 			{
 				//Third Move Validation
-				if (selectedImagePlacement == stringImageZoneThree && selectedImage == stringImageThree)
+				if (selectedImagePlacement == stringImageZoneThree && selectedImage == stringImageOne)
 				{
 					moveThreeCorrect = true;
 					
 		    	//replace/move image to placeholder spot
-		    	imageThree.offsetTopAndBottom(-240);
-		    	imageThree.offsetLeftAndRight(760);
+		    	imageOne.offsetTopAndBottom(-226);
+		    	imageOne.offsetLeftAndRight(760);
 		    	
 					//sets text view to update the top text display 
 		     // displayText.setText("Correct!");
@@ -279,8 +314,8 @@ void thirdGameMoveValidation()
 					moveThreeCorrect = false;
 		    	roundIsWon = false;
 		    	
-		      //sets text view to update the top text display 
-		      displayText.setText("Incorrect! Try again!");
+//		      //sets text view to update the top text display 
+//		      displayText.setText("Incorrect! Try again!");
 				}
 			}
 		}
@@ -309,9 +344,9 @@ void gameIsWon()
 			//Show good job text
 			goodJobTextShowing = true;
 			
-      //sets text view to update the top text display 
-      displayText.setText("You are on round " + currentGameRound + 
-	  			" out of " + mainRoundsPerGame + " rounds.");
+//      //sets text view to update the top text display 
+//      displayText.setText("You are on round " + currentGameRound + 
+//	  			" out of " + mainRoundsPerGame + " rounds.");
 	  	
 	  	//Tally of total rounds played
 	  	totalRoundsPlayed += currentGameRound;
@@ -336,7 +371,7 @@ void gameIsWon()
 		  	totalGameScore += roundScore;
 				
 	      //sets text view to update the top text display 
-	      displayText.setText("You Won the Game!!! Score: " + roundScore);
+//	      displayText.setText("You Won the Game!!! Score: " + roundScore);
 		  	
 		  	gameOverCalculationsDone = true;
 	      
@@ -346,9 +381,9 @@ void gameIsWon()
 			}
 			else
 			{
-	      //sets text view to update the top text display 
-	      displayText.setText( "You are on round " + currentGameRound + 
-		  			" out of " + mainRoundsPerGame + " rounds.");
+//	      //sets text view to update the top text display 
+//	      displayText.setText( "You are on round " + currentGameRound + 
+//		  			" out of " + mainRoundsPerGame + " rounds.");
 
 			}
 	}
@@ -392,4 +427,22 @@ public void resetGame()
 	 goodJobTextShowing = false;
 
 }
+
+//public void randomImages()
+//{
+//			
+//			for(int i=0; i > 3 ; i++) 
+//			{
+//					int randIndex = random.nextInt(i);
+//					String temp = myImages[i];
+//					myImages[i] = myImages[randIndex];
+//					myImages[randIndex] = temp;
+//			}
+//			
+//			image1 = myImages[0];
+//			image2 = myImages[1];
+//			image3 = myImages[2];
+//	
+//}
+
 }
