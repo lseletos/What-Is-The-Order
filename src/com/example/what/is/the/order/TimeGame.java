@@ -92,11 +92,6 @@ public class TimeGame extends Activity
   @Override
   public void onCreate(Bundle savedInstanceState) 
   {
-  	
-		 //init array
-//			myImages[0] = "block1";
-//			myImages[1] = "block2";
-//			myImages[2] = "block3";
 
       super.onCreate(savedInstanceState);
       setContentView(R.layout.time_game);
@@ -222,13 +217,6 @@ void firstGameMoveValidation()
     	//replace/move image to placeholder spot
     	imageTwo.offsetTopAndBottom(-226);
     	imageTwo.offsetLeftAndRight(-374);
-    	
-
-//Error! Input user name
-    	Toast.makeText(getBaseContext(), selectedImage,   
-      Toast.LENGTH_SHORT).show();      
-    	
-
 
 		}
 		//First Move Error Checking
@@ -249,10 +237,7 @@ void secondGameMoveValidation()
 {
 	//When Image placement zone is clicked then continue
 	if(isClicked_ImagePlacementIcons == true)
-	{
-	//Error! Input user name
-  	Toast.makeText(getBaseContext(), selectedImage,   
-    Toast.LENGTH_SHORT).show();      
+	{     
   	
 		//Only move on if move one is correct
 		if (moveOneCorrect == true)
@@ -374,9 +359,12 @@ void gameIsWon()
 //	      displayText.setText("You Won the Game!!! Score: " + roundScore);
 		  	
 		  	gameOverCalculationsDone = true;
-	      
-		  	Toast.makeText(getBaseContext(), "Your total score is: " + totalGameScore,   
-		    Toast.LENGTH_SHORT).show();   	
+//	      
+//		  	Toast.makeText(getBaseContext(), "Your total score is: " + totalGameScore,   
+//		    Toast.LENGTH_SHORT).show();   
+		  	
+     	 Intent intent = new Intent(TimeGame.this, RewardVideo.class);
+     	 startActivity(intent);
 
 			}
 			else
@@ -427,6 +415,15 @@ public void resetGame()
 	 goodJobTextShowing = false;
 
 }
+
+	
+/** Called when the user clicks the Game Info button */
+public void replayVideo(View view) 
+{
+	 Intent intent = new Intent(TimeGame.this, BlockVideo.class);
+	 startActivity(intent);
+}
+
 
 //public void randomImages()
 //{

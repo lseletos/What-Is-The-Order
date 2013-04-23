@@ -149,9 +149,6 @@ public class MainActivity extends Activity
 	  	//Relative Time button set up
 	    buttonRelativeTime = (Button)findViewById(R.id.buttonRelativeTime);     
 	    buttonRelativeTime.setOnClickListener(buttonRelativeTimeListener);
- 
-	 	  
-	 	 
 
 	    
   }
@@ -331,6 +328,8 @@ public class MainActivity extends Activity
   
 
   
+  
+  
   /** Called when the user clicks the Play Game button */
   public void playGame(View view) 
   {
@@ -338,28 +337,12 @@ public class MainActivity extends Activity
     {
     	//Error! Select how many rounds per game
     	Toast.makeText(getBaseContext(), "Error! Select how many rounds per game you want." + roundsPerGame,   
-      Toast.LENGTH_SHORT).show();   
+      Toast.LENGTH_SHORT).show(); 
     }
     else
-    {
-   
-    	  
-       /** Called when the activity is first created. */      
-           VideoView blockVid = (VideoView)this.findViewById(R.id.videoView);
-           blockVid.setMinimumHeight(100);
-           blockVid.setMinimumWidth(100);
-           String fileName = "/res/drawable-mdpi/blocks.mp4";
-           blockVid.setVideoURI(Uri.parse(fileName));
-           blockVid.start();
-
-      
-       
-    	//how many rounds per game
-    	Toast.makeText(getBaseContext(), "Rounds per game: " + roundsPerGame,   
-      Toast.LENGTH_SHORT).show();   
-    	Intent intent = new Intent(this, TimeGame.class);
+    {	
+    	Intent intent = new Intent(this, BlockVideo.class);
       startActivity(intent);
-
     }
 
   }

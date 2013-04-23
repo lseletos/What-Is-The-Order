@@ -620,10 +620,5 @@
         android:textSize="20dp"
         tools:ignore="HardcodedText" />
     
-   <VideoView
-	   android:id="@+id/videoView"
-	   android:layout_width="5dp"
-	   android:layout_height="5dp"
-   />
 
 </AbsoluteLayout>
